@@ -23,7 +23,7 @@ namespace ClientTest
                         Name = "Genesis",
                     };
                     var res = client.CreateVehicle(param);
-                    Console.WriteLine($"")
+                    Console.WriteLine($"");
                 }
                 else if (cki.Key == ConsoleKey.D2)
                 {
