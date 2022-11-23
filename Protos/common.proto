@@ -1,0 +1,19 @@
+﻿
+syntax = "proto3";
+package morai_proto;
+
+option optimize_for = SPEED;
+// SPEED : 기본값
+// CODE_SIZE : 속도가 중요하지 않은 앱에서 유용한 옵션
+// LITE_RUNTIME : 런타임 라이브러리에만 의존하는 클래스를 생성
+//				  모바일에서 유용한
+//				  Message -> MessageLite 인터페이스 사용
+//				  Descriptor, Reflection 등의 기능은 제외된다.
+
+option csharp_namespace = "Morai.Proto";
+
+message Vector3 {
+	double x = 1;
+	double y = 2;
+	double z = 3;
+}

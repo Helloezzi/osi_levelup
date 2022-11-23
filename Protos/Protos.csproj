@@ -8,8 +8,8 @@
     <ProjectGuid>{53FD9925-AE84-493E-9B24-53C13521E89C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Protobuf_Foretify</RootNamespace>
-    <AssemblyName>Protobuf_Foretify</AssemblyName>
+    <RootNamespace>MoraiProto</RootNamespace>
+    <AssemblyName>MoraiProto</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -76,6 +76,9 @@
     </Protobuf>
   </ItemGroup>
   <ItemGroup>
+    <Protobuf Include="common.proto">
+      <Generator>MSBuild:Compile</Generator>
+    </Protobuf>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

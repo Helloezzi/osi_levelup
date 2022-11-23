@@ -8,7 +8,6 @@ namespace ClientTest
     {
         public static void Main(string[] args)
         {
-            // morai bridge client test
             Channel channel = new Channel("127.0.0.1:7789", ChannelCredentials.Insecure);
             var client = new MoraiService.MoraiServiceClient(channel);
 
@@ -25,14 +24,7 @@ namespace ClientTest
                     var res = client.CreateVehicle(param);
                     Console.WriteLine($"");
                 }
-                else if (cki.Key == ConsoleKey.D2)
-                {
-                }
-                else if (cki.Key == ConsoleKey.D3)
-                {
-                }
             } while (cki.Key != ConsoleKey.Escape);
-
             // program end
         }
     }

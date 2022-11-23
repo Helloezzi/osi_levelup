@@ -1,34 +1,26 @@
+
 syntax = "proto3";
+package morai_proto;
 
 option csharp_namespace = "Morai.Proto";
 
-package Morai.Proto;
+import "common.proto";
 
 // The greeting service definition.
 service MoraiService {      
-  rpc Test(HelloRequest) returns (stream HelloReply) {}
+  rpc Hello(HelloRequest) returns (stream HelloReply) {}
   rpc CreateVehicle(CreateVehicleParam) returns (VehicleInfo) {}
 }
 
-message Vector3 {
-	double x = 1;
-	double y = 2;
-	double z = 3;
-}
-
 message CreateVehicleParam {
-	string name = 1;	
-	Vector3 position = 2;	
+	string name = 1;
+	Vector3 position = 3;
 }
 
 message VehicleInfo {
 	string name = 1;
-	//int id = 2;
-	Vector3 position = 2;
-}
-
-// The response message containing the greetings
-message VoidMessage{
+	int64 id = 2;
+	Vector3 position = 3;
 }
 
 message HelloRequest{
@@ -37,4 +29,7 @@ message HelloRequest{
 
 message HelloReply {
   string message = 1;
+}
+
+message VoidMessage{
 }
